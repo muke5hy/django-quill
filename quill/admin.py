@@ -1,6 +1,6 @@
 import json
 
-from django.conf.urls import patterns, url
+from django.conf.urls import url
 from django.contrib import admin
 from django.core.files.storage import default_storage
 from django.http import Http404, HttpResponse, HttpResponseBadRequest
@@ -14,10 +14,9 @@ class QuillAdmin(admin.ModelAdmin):
 
     def get_urls(self):
         """Add URLs needed to handle image uploads."""
-        urls = patterns(
-            '',
+        urls = [
             url(r'^upload/$', self.admin_site.admin_view(self.handle_upload), name='quill-file-upload'),
-        )
+        ]
         return urls + super(QuillAdmin, self).get_urls()
 
     def handle_upload(self, request):

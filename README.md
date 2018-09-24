@@ -40,6 +40,7 @@ class MyModel(models.Model):
     content2 = RichTextField(config='basic')
 ```
 
+
 If you want to support image uploads, your admin needs to extend from `quill.admin.QuillAdmin`:
 
 ```python
@@ -47,6 +48,20 @@ from quill.admin import QuillAdmin
 
 class MyAdmin(QuillAdmin):
     pass
+```
+
+If you don't want to touch your models and enable the editor for all text fields in the admin page,
+ you can do as well:
+
+```python
+from quill.widgets import QuillEditorWidget
+from quill.admin import QuillAdmin
+
+
+class MyAdmin(admin.ModelAdmin):
+    formfield_overrides = {
+        models.TextField: {'widget': QuillEditorWidget},
+    }
 ```
 
 ### Customizing

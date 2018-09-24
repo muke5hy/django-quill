@@ -1,6 +1,6 @@
 from django import forms
 from django.apps import apps
-from django.forms.util import flatatt
+from django.forms.utils import flatatt
 from django.template.loader import render_to_string
 from django.templatetags.static import static
 from django.utils.safestring import mark_safe
@@ -32,11 +32,11 @@ class QuillEditorWidget(forms.Textarea):
         self.config = config
         super(QuillEditorWidget, self).__init__(*args, **kwargs)
 
-    def render(self, name, value, attrs={}):
+    def render(self, name, value, attrs=None, renderer=None):
         """Render the Quill WYSIWYG."""
         if value is None:
             value = ''
-        final_attrs = self.build_attrs(attrs, name=name)
+        final_attrs = self.build_attrs(attrs, {'name': name})
         quill_app = apps.get_app_config('quill')
         quill_config = getattr(quill_app, self.config)
 
