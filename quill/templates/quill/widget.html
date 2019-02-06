@@ -31,7 +31,7 @@
 
 	var form = document.querySelector('form');
 	form.addEventListener('submit', function () {
-		var html = editor.quill.getHTML();
+		var html = editor.quill.root.innerHTML;
 		var textArea = document.querySelector('#' + id);
 		if(textArea) {
 			textArea.value = html;

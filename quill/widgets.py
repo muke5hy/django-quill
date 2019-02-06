@@ -13,7 +13,8 @@ class QuillEditorWidget(forms.Textarea):
     class Media:
         css = {
             'all': (
-                static('quill/css/vendor/quill-0.19.11.snow.css'),
+                static('quill/css/quill.snow.min.css'),
+                static('quill/css/quill.core.css'),
                 static('quill/css/quill.css'),
             )
         }

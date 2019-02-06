@@ -21,8 +21,9 @@ function QuillImage(quill, options) {
     this.quill = quill;
     this.options = _.defaults(options, DEFAULTS);
 
-    this.button = this.quill.modules.toolbar.container.querySelector('.ql-image');
+    
     if(this.button) {
+        this.button = this.quill.modules.toolbar.container.querySelector('.ql-image');
         this.initListeners();
     }
 }
@@ -93,5 +94,5 @@ QuillImage.prototype.initListeners = function () {
     });
 };
 
-Quill.registerModule('image', QuillImage);
+Quill.register('modules/image', QuillImage, true);
 module.exports = QuillImage;

@@ -41,7 +41,6 @@ function QuillDjango(id, editorSelector, toolbarSelector, imageModuleOpts, theme
     this.quill = new Quill(editorSelector, {
         modules: {
             'toolbar': {container: toolbarSelector},
-            'link-tooltip': true,
             'image': imageModuleOpts
         },
         theme: theme || 'snow'
