@@ -1,4 +1,4 @@
-{% load quill_tags %}
+{% load quilljs_tags %}
 <div class="quill-wrapper" data-field-id="{{ id }}">
 	{% render_toolbar config %}
 	{% render_editor config %}
@@ -17,14 +17,14 @@
     /* global QuillDjango:true */
     'use strict';
 
-	var editorSelector = '[data-quill="{{ "editor_selector"|quill_conf }}"]';
-	var toolbarSelector = '[data-quill="{{ "toolbar_selector"|quill_conf }}"]';
+	var editorSelector = '[data-quill="{{ "editor_selector"|quilljs_conf }}"]';
+	var toolbarSelector = '[data-quill="{{ "toolbar_selector"|quilljs_conf }}"]';
 	var id = '{{ id }}';
     var imageModuleOpts = {
         handler: '{% url "admin:quill-file-upload" %}',
-        allowedExtensions: JSON.parse('{{ "allowed_image_extensions"|quill_conf_json }}')
+        allowedExtensions: JSON.parse('{{ "allowed_image_extensions"|quilljs_conf_json }}')
     };
-	var theme = '{{ "theme"|quill_conf }}';
+	var theme = '{{ "theme"|quilljs_conf }}';
 	var editor = new QuillDjango(id, editorSelector, toolbarSelector, imageModuleOpts, theme);
     window.DjangoQuillEditors = window.DjangoQuillEditors || {};
     window.DjangoQuillEditors[id] = editor;

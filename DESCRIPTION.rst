@@ -10,15 +10,15 @@ Quick Start
 
     .. code-block:: bash
 
-        pip install django-quill
+        pip install django-quilljs
 
-2. Add "quill" to your INSTALLED_APPS setting like this:
+2. Add "quilljs" to your INSTALLED_APPS setting like this:
 
     .. code-block:: python
 
         INSTALLED_APPS = (
             ...
-            'quill',
+            'quilljs',
         )
 
-See the `GitHub repo <https://github.com/gsmke/django-quill>`_ for more details.
+See the `GitHub repo <https://github.com/muke5hy/django-quilljs>`_ for more details.

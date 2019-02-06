@@ -1,2 +1,2 @@
-quill/static/quill/js/build/*.js
-quill/static/quill/js/vendor/*.js
+quilljs/static/quilljs/js/build/*.js
+quilljs/static/quilljs/js/vendor/*.js

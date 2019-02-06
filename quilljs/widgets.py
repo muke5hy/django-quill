@@ -13,15 +13,15 @@ class QuillEditorWidget(forms.Textarea):
     class Media:
         css = {
             'all': (
-                static('quill/css/quill.snow.min.css'),
-                static('quill/css/quill.core.css'),
-                static('quill/css/quill.css'),
+                static('quilljs/css/quill.snow.min.css'),
+                static('quilljs/css/quill.core.css'),
+                static('quilljs/css/quill.css'),
             )
         }
 
         js = (
-            static('quill/js/vendor/SimpleAjaxUploader-1a6f62289d.min.js'),
-            static('quill/js/build/quill-django.min.js'),
+            static('quilljs/js/vendor/SimpleAjaxUploader-1a6f62289d.min.js'),
+            static('quilljs/js/build/quilljs-django.min.js'),
         )
 
     def __init__(self, config='default', *args, **kwargs):
@@ -38,10 +38,10 @@ class QuillEditorWidget(forms.Textarea):
         if value is None:
             value = ''
         final_attrs = self.build_attrs(attrs, {'name': name})
-        quill_app = apps.get_app_config('quill')
-        quill_config = getattr(quill_app, self.config)
+        quilljs_app = apps.get_app_config('quilljs')
+        quilljs_config = getattr(quilljs_app, self.config)
 
-        return mark_safe(render_to_string(quill_config['template'], {
+        return mark_safe(render_to_string(quilljs_config['template'], {
             'final_attrs': flatatt(final_attrs),
             'value': value,
             'id': final_attrs['id'],

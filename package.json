@@ -1,5 +1,5 @@
 {
-  "name": "django-quill",
+  "name": "django-quilljs",
   "version": "0.1.0",
   "description": "Easily use Quill.js <http://quilljs.com/> in your django admin.",
   "main": "index.js",
@@ -24,16 +24,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "github.com/gsmke/django-quill"
+    "url": "github.com/muke5hy/django-quilljs"
   },
   "keywords": [
     "django",
-    "quill"
+    "quill",
+    "quilljs"
   ],
   "author": "Ryan Senkbeil",
   "license": "BSD",
   "bugs": {
-    "url": "https://github.com/gsmke/django-quill/issues"
+    "url": "https://github.com/muke5hy/django-quilljs/issues"
   },
-  "homepage": "https://github.com/gsmke/django-quill"
+  "homepage": "https://github.com/muke5hy/django-quilljs"
 }

@@ -1,6 +1,6 @@
 include LICENSE
 include README.md
-recursive-include quill/migrations *
-recursive-include quill/static *
-recursive-include quill/templates *
-recursive-include quill/templatetags *
+recursive-include quilljs/migrations *
+recursive-include quilljs/static *
+recursive-include quilljs/templates *
+recursive-include quilljs/templatetags *

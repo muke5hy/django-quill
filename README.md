@@ -1,7 +1,7 @@
-# django-quill
+# django-quilljs
 
-[![Build Status](https://img.shields.io/travis/muke5hy/django-quill/master.svg?style=flat)](https://travis-ci.org/muke5hy/django-quill)
-[![Latest Version](https://img.shields.io/pypi/v/django-quill.svg?style=flat)](https://pypi.python.org/pypi/django-quill/)
+[![Build Status](https://img.shields.io/travis/muke5hy/django-quilljs/master.svg?style=flat)](https://travis-ci.org/muke5hy/django-quilljs)
+[![Latest Version](https://img.shields.io/pypi/v/django-quilljs.svg?style=flat)](https://pypi.python.org/pypi/django-quilljs/)
 
 Easily use [Quill.js](http://quilljs.com/) in your django admin.
 
@@ -16,15 +16,15 @@ Requires django 1.7.
 1. Install the package from pypi
 
     ```bash
-    pip install django-quill
+    pip install django-quilljsjs
     ```
 
-2. Add "quill" to your INSTALLED_APPS setting like this:
+2. Add "quilljs" to your INSTALLED_APPS setting like this:
 
     ```python
     INSTALLED_APPS = (
         ...
-        'quill',
+        'quilljs',
     )
     ```
 
@@ -97,7 +97,7 @@ There are two toolbars that come with this package:
 
 ## Development
 
-There are several dependencies on npm that are required before building django-quill:
+There are several dependencies on npm that are required before building django-quilljs:
 
 ```bash
 $ npm install

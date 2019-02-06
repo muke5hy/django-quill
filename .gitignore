@@ -49,7 +49,7 @@ docs/_build/
 
 .DS_Store
 /node_modules
-/quill_example/db.sqlite3
-/quill_example/uploads
+/quilljs_example/db.sqlite3
+/quilljs_example/uploads
 /README.html
 /out

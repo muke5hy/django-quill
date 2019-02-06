@@ -1,6 +1,6 @@
-UNIT_TESTS = $(shell find ./quill/static/quill/js/test -name "*.js")
-JS_FILES = $(shell find ./quill/static -name "*.js" -not -path "./quill/static/quill/js/test/*.js" -not -path "./quill/static/quill/js/build/*")
-PY_FILES = $(shell find ./quill -name "*.py")
+UNIT_TESTS = $(shell find ./quilljs/static/quilljs/js/test -name "*.js")
+JS_FILES = $(shell find ./quilljs/static -name "*.js" -not -path "./quilljs/static/quilljs/js/test/*.js" -not -path "./quilljs/static/quilljs/js/build/*")
+PY_FILES = $(shell find ./quilljs -name "*.py")
 
 test:
 	flake8 --ignore=E501 $(PY_FILES)
@@ -13,16 +13,16 @@ endif
 
 docs:
 	rm -rf out
-	jsdoc quill/static/quill/js/ README.md
+	jsdoc quilljs/static/quilljs/js/ README.md
 
 coverage:
 	./node_modules/.bin/browserify -t coverify $(UNIT_TESTS) | ./node_modules/.bin/testling | ./node_modules/.bin/coverify
 
 build:
-	rm -f quill/static/quill/js/build/quill-django.js
-	rm -f quill/static/quill/js/build/quill-django.min.js
-	./node_modules/.bin/browserify $(JS_FILES) -o quill/static/quill/js/build/quill-django.js
-	./node_modules/.bin/uglifyjs quill/static/quill/js/build/quill-django.js > quill/static/quill/js/build/quill-django.min.js
+	rm -f quilljs/static/quilljs/js/build/quilljs-django.js
+	rm -f quilljs/static/quilljs/js/build/quilljs-django.min.js
+	./node_modules/.bin/browserify $(JS_FILES) -o quilljs/static/quilljs/js/build/quilljs-django.js
+	./node_modules/.bin/uglifyjs quilljs/static/quilljs/js/build/quilljs-django.js > quilljs/static/quilljs/js/build/quilljs-django.min.js
 
 watch:
-	./node_modules/.bin/watchify $(JS_FILES) -o quill/static/quill/js/build/quill-django.min.js
+	./node_modules/.bin/watchify $(JS_FILES) -o quilljs/static/quilljs/js/build/quilljs-django.min.js
