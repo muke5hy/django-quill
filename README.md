@@ -5,9 +5,9 @@
 
 Easily use [Quill.js](http://quilljs.com/) in your django admin.
 
-This project is heavily inspired by [django-ckeditor](https://github.com/django-ckeditor/django-ckeditor).
+This project forked from [django-quill](https://github.com/coremke/django-quill).
 
-Requires django 1.7.
+Requires django 2.1.5
 
 ![Admin Preview](/.screenshots/admin.png?raw=true)
 
@@ -16,7 +16,7 @@ Requires django 1.7.
 1. Install the package from pypi
 
     ```bash
-    pip install django-quilljsjs
+    pip install django-quilljs
     ```
 
 2. Add "quilljs" to your INSTALLED_APPS setting like this:
@@ -46,7 +46,7 @@ If you want to support image uploads, your admin needs to extend from `quilljs.a
 ```python
 from quilljs.admin import QuillAdmin
 
-class MyAdmin(QuillAdmin):
+class MyAdmin(QuilljsAdmin):
     pass
 ```
 
