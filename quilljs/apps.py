@@ -1,11 +1,11 @@
 from django.apps import AppConfig
 
 
-class QuillConfig(AppConfig):
+class QuilljsConfig(AppConfig):
 
-    """Base configuration for django-quill."""
+    """Base configuration for django-quilljs."""
 
-    name = 'quill'
+    name = 'quilljs'
 
     editor_selector = 'editor'
     toolbar_selector = 'toolbar'

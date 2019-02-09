@@ -1,7 +1,7 @@
 from django.db import models
 from django.utils.encoding import python_2_unicode_compatible
 
-from quill.fields import RichTextField
+from quilljs.fields import RichTextField
 
 
 @python_2_unicode_compatible

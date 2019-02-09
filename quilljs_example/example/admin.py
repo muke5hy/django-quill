@@ -1,5 +1,5 @@
 from django.contrib import admin
-from quill.admin import QuillAdmin
+from quilljs.admin import QuillAdmin
 
 from .models import ExampleModel
 

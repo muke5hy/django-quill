@@ -11,7 +11,7 @@ class RichTextField(models.TextField):
     def __init__(self, config='default', *args, **kwargs):
         """Create a new WYSIWYG field.
 
-        :param str config: The QuillJS config to use (from :py:class:`quill.apps.QuillConfig`)
+        :param str config: The QuillJS config to use (from :py:class:`quilljs.apps.QuilljsConfig`)
 
         """
         self.config = config
@@ -34,7 +34,7 @@ class RichTextFormField(forms.fields.CharField):
     def __init__(self, config='default', *args, **kwargs):
         """Create a new WYSIWYG form field.
 
-        :param str config: The QuillJS config to use (from :py:class:`quill.apps.QuillConfig`)
+        :param str config: The QuillJS config to use (from :py:class:`quilljs.apps.QuilljsConfig`)
 
         """
         kwargs.update({

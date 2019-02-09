@@ -1,21 +1,19 @@
 # django-quill Example Project
 
 
-### Setting up virtualenv
+### Running Development Server
 
-1. Create virtualenv
-
-    ```bash
-    $ mkvirtualenv -p $(which python3) django-quill
-    ```
-
-2. Install django inside the virtualenv
+1. install virtualenv
 
     ```bash
-    $ pip install django
+    $ make install
+    ```
+2. Activate virtual env
+    ```bash
+    $ source .venv/bin/activate
     ```
 
-3. Install quill
+3. Install quilljs
 
     ```bash
     $ python setup.py develop
@@ -24,30 +22,22 @@
 4. Sync Database and create superuser
 
     ```bash
-    $ cd quill_example
+    $ cd quilljs_example
     $ python manage.py migrate
     $ python manage.py createsuperuser
     ```
 
-### Running Development Server
-
-1. Activate virtualenv
+5. Run development server
 
     ```bash
-    $ workon django-quill
-    ```
-
-2. Run development server
-
-    ```bash
-    $ cd django-quill
+    $ cd django-quilljs
     $ python manage.py runserver
     ```
 
-3. In another console window, build django-quill:
+6. In another console window, build django-quilljs:
 
     ```bash
     $ make watch
     ```
 
-4. The example project will be available at http://localhost:8000.
+7. The example project will be available at http://localhost:8000.

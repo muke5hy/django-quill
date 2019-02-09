@@ -2,6 +2,11 @@ UNIT_TESTS = $(shell find ./quilljs/static/quilljs/js/test -name "*.js")
 JS_FILES = $(shell find ./quilljs/static -name "*.js" -not -path "./quilljs/static/quilljs/js/test/*.js" -not -path "./quilljs/static/quilljs/js/build/*")
 PY_FILES = $(shell find ./quilljs -name "*.py")
 
+install:
+	sudo pip install virtualenv
+	virtualenv .venv -p python3
+	.venv/bin/pip install django
+
 test:
 	flake8 --ignore=E501 $(PY_FILES)
 	./node_modules/.bin/jshint $(JS_FILES) $(UNIT_TESTS)

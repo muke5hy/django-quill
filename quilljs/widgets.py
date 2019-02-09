@@ -13,9 +13,9 @@ class QuillEditorWidget(forms.Textarea):
     class Media:
         css = {
             'all': (
-                static('quilljs/css/quill.snow.min.css'),
-                static('quilljs/css/quill.core.css'),
-                static('quilljs/css/quill.css'),
+                static('quilljs/css/quilljs.snow.min.css'),
+                static('quilljs/css/quilljs.core.css'),
+                static('quilljs/css/quilljs.css'),
             )
         }
 
@@ -27,7 +27,7 @@ class QuillEditorWidget(forms.Textarea):
     def __init__(self, config='default', *args, **kwargs):
         """Create a new Quill WYSIWYG Widget.
 
-        :param str config: The QuillJS config to use (from :py:class:`quill.apps.QuillConfig`)
+        :param str config: The QuillJS config to use (from :py:class:`quilljs.apps.QuilljsConfig`)
 
         """
         self.config = config

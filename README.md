@@ -32,7 +32,7 @@ Requires django 1.7.
 
 ```python
 from django.db import models
-from quill.fields import RichTextField
+from quilljs.fields import RichTextField
 
 
 class MyModel(models.Model):
@@ -41,10 +41,10 @@ class MyModel(models.Model):
 ```
 
 
-If you want to support image uploads, your admin needs to extend from `quill.admin.QuillAdmin`:
+If you want to support image uploads, your admin needs to extend from `quilljs.admin.QuillAdmin`:
 
 ```python
-from quill.admin import QuillAdmin
+from quilljs.admin import QuillAdmin
 
 class MyAdmin(QuillAdmin):
     pass
@@ -54,8 +54,8 @@ If you don't want to touch your models and enable the editor for all text fields
  you can do as well:
 
 ```python
-from quill.widgets import QuillEditorWidget
-from quill.admin import QuillAdmin
+from quilljs.widgets import QuillEditorWidget
+from quilljs.admin import QuillAdmin
 
 
 class MyAdmin(admin.ModelAdmin):
@@ -66,23 +66,23 @@ class MyAdmin(admin.ModelAdmin):
 
 ### Customizing
 
-To customize this app, extend ``apps.QuillConfig`` and modify whatever you need. For example, to add a new toolbar:
+To customize this app, extend ``apps.QuilljsConfig`` and modify whatever you need. For example, to add a new toolbar:
 
 ```python
-from quill.apps import QuillConfig
+from quill.apps import QuilljsConfig
 
 
-class MyQuillConfig(QuillConfig):
+class MyQuilljsConfig(QuilljsConfig):
     my_toolbar = dict(full, toolbar_template='quill/toolbars/my_toolbar.html')
 ```
 
 To customize the extensions of the images that can be uploaded:
 
 ```python
-from quill.apps import QuillConfig
+from quill.apps import QuilljsConfig
 
 
-class MyQuillConfig(QuillConfig):
+class MyQuilljsConfig(QuilljsConfig):
     allowed_image_extensions = ['jpeg', 'gif']
 ```
 

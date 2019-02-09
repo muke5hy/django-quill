@@ -2,7 +2,7 @@
 from __future__ import unicode_literals
 
 from django.db import models, migrations
-import quill.fields
+import quilljs.fields
 
 
 class Migration(migrations.Migration):
@@ -15,7 +15,7 @@ class Migration(migrations.Migration):
             name='ExampleModel',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('editor', quill.fields.RichTextField()),
+                ('editor', quilljs.fields.RichTextField()),
             ],
             options={
             },
