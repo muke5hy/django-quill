@@ -14,7 +14,7 @@
 <!-- Initialize Quill editor -->
 <script>
 (function () {
-    /* global QuillDjango:true */
+    /* global QuilljsDjango:true */
     'use strict';
 
 	var editorSelector = '[data-quill="{{ "editor_selector"|quilljs_conf }}"]';
@@ -25,7 +25,7 @@
         allowedExtensions: JSON.parse('{{ "allowed_image_extensions"|quilljs_conf_json }}')
     };
 	var theme = '{{ "theme"|quilljs_conf }}';
-	var editor = new QuillDjango(id, editorSelector, toolbarSelector, imageModuleOpts, theme);
+	var editor = new QuilljsDjango(id, editorSelector, toolbarSelector, imageModuleOpts, theme);
     window.DjangoQuillEditors = window.DjangoQuillEditors || {};
     window.DjangoQuillEditors[id] = editor;
 
